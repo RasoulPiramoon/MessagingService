@@ -1,12 +1,12 @@
-﻿using MessageSendingService.Enums;
+﻿using Core.Enums;
 
-namespace MessageSendingService.Classes
+namespace Core.Classes
 {
-    internal class Message
+    public class Message
     {
-        public Message(int id, string customer, string email, string mobileNo, MessageTypeEnum messageType, string content, DateTime createdOn)
+        public Message(string customer, string email, string mobileNo, MessageTypeEnum messageType, string content, DateTime createdOn)
         {
-            Id = id;
+            Id = Guid.NewGuid();
             Customer = customer;
             Email = email;
             MobileNo = mobileNo;
@@ -15,7 +15,7 @@ namespace MessageSendingService.Classes
             CreatedOn = createdOn;
         }
 
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Customer { get; set; }
         public string Email { get; set; }
         public string MobileNo { get; set; }

@@ -1,4 +1,5 @@
-﻿using MessageSendingService.Interface;
+﻿using Core.Classes;
+using Core.Interface;
 
 namespace MessageSendingService.Classes
 {
